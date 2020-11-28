@@ -380,16 +380,19 @@ a {
 
 	&__menu {
 		@include r(767) {
-			margin-left: 20px;
+			margin-left: 40px;
 			text-align: left;
-			padding-bottom: 20px;
-			padding-top: 10px;
+			padding-bottom: 7px;
+			padding-top: 12px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 
 		a {
 			@include r(767) {
-				margin-right: 0;
-				margin-left: 20px;
+				margin-right: 8px;
+				margin-left: 8px;
 				display: inline-block;
 				margin-bottom: 5px;
 			}
@@ -410,7 +413,7 @@ a {
 
 			&::after {
 				@include r(767) {
-					top: -2px;
+					display: none;
 				}
 
 				content: '·';
@@ -470,11 +473,19 @@ a {
 	}
 
 	&__search {
+		@include r(767) {
+			width: 100%;
+		}
+
 		position: relative;
 
 		input {
 			@include r(767) {
 				width: 100%;
+			}
+
+			@include r(374) {
+				padding: 11px 15px 11px 15px;
 			}
 
 			background: #222;
@@ -511,7 +522,7 @@ a {
 
 	@include r(767) {
 		flex-wrap: wrap;
-		margin: 0 -10px;
+		margin: 0 -14px;
 	}
 
 	padding: 30px 66px;
